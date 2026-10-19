@@ -9,21 +9,23 @@ export const PORTFOLIO_INFO: Portfolio = {
   },
   personal: {
     name: "Abel Ambachew",
-    title: "Full Stack Web Developer",
-    headline: "React · Node.js · MySQL · AI Integration",
+    title: "Junior Full-Stack Developer",
+    headline: "React · Node.js · JavaScript · AI Integration",
     avatar: [
-      { url: "./profile.jpg", label: "Portrait" },
-      { url: "./profile1.jpg", label: "Portrait" },
+      { url: "/profile.jpg", label: "Portrait" },
+      { url: "/profile1.jpg", label: "Portrait" },
     ],
     summary:
-      "Computer Science graduate and AI-Powered Fullstack developer trained at Evangadi Network. I build responsive web applications with React and Node.js, integrate AI APIs (including Gemini), and care about clean UI, solid backends, and shipping real projects end to end.",
+      "Computer Science graduate and Full-Stack Developer with hands-on experience in React.js, JavaScript, Node.js, REST APIs and database design. Builds responsive, user-friendly web applications and has shipped three deployed projects. Completed an intensive full-stack program at Evangadi Networks on a scholarship and is eager to grow through real-world engineering work.",
     hero: {
       summary:
-        "Full Stack Web Developer focused on React, Node.js, and AI-powered applications. Fresh Computer Science graduate with hands-on projects in forums, chat apps, and streaming-style UIs — ready to grow with a team and ship products users love.",
-      subtitle: "Based in Addis Ababa · Open to opportunities",
+        "Computer Science graduate and Full-Stack Developer with hands-on experience in React.js, JavaScript, Node.js, REST APIs and database design. Builds responsive, user-friendly web applications and has shipped three deployed projects.",
+      subtitle:
+        "Open to junior full-stack & frontend roles · Also available for freelance projects · Addis Ababa",
     },
     contact: {
       email: "abelambachew11@gmail.com",
+      phone: "+251 905 895 282",
       location: "Addis Ababa, Ethiopia",
       website: "https://github.com/Abela-code",
       socials: [
@@ -32,92 +34,54 @@ export const PORTFOLIO_INFO: Portfolio = {
           url: "https://github.com/Abela-code",
           icon: "SiGithub",
         },
+        {
+          label: "LinkedIn",
+          url: "https://linkedin.com/in/abel-ambachew",
+          icon: "SiLinkedin",
+        },
       ],
     },
   },
   highlights: [
-    "B.Sc. Computer Science graduate",
-    "Evangadi Network — AI Powered Fullstack Application Development",
-    "Built full-stack apps with React, Node.js, MySQL & Gemini API",
-    "Open to junior full-stack / frontend roles",
+    "B.Sc. Computer Science — Debre Tabor University",
+    "Evangadi Networks full-stack program (scholarship)",
+    "Three deployed projects: Forum, EtGPT, Netstream",
+    "Open to junior full-stack & frontend roles · Also available for freelance",
   ],
   skills: [
     {
       title: "Frontend",
       skills: [
-        { name: "HTML5", level: 85, icon: "SiHtml5", category: "frontend" },
-        { name: "CSS3", level: 85, icon: "SiCss3", category: "frontend" },
-        {
-          name: "JavaScript",
-          level: 80,
-          icon: "SiJavascript",
-          category: "frontend",
-        },
-        { name: "React.js", level: 80, icon: "SiReact", category: "frontend" },
-        {
-          name: "Responsive Design",
-          level: 80,
-          icon: "SiCss3",
-          category: "frontend",
-        },
+        { name: "React", category: "frontend" },
+        { name: "JavaScript", category: "frontend" },
+        { name: "HTML5", category: "frontend" },
+        { name: "CSS3", category: "frontend" },
       ],
     },
     {
       title: "Backend",
       skills: [
-        { name: "Node.js", level: 75, icon: "SiNodedotjs", category: "backend" },
-        { name: "Express.js", level: 75, icon: "SiExpress", category: "backend" },
-        {
-          name: "REST APIs",
-          level: 75,
-          icon: "SiPostman",
-          category: "backend",
-        },
-        {
-          name: "Auth (JWT)",
-          level: 70,
-          icon: "SiJsonwebtokens",
-          category: "backend",
-        },
+        { name: "Node.js", category: "backend" },
+        { name: "Express", category: "backend" },
+        { name: "REST APIs", category: "backend" },
+        { name: "JWT auth", category: "backend" },
       ],
     },
     {
-      title: "Databases",
+      title: "Data & AI",
       skills: [
-        { name: "MySQL", level: 75, icon: "SiMysql", category: "database" },
-        { name: "SQL", level: 75, icon: "SiMysql", category: "database" },
-      ],
-    },
-    {
-      title: "AI Integration",
-      skills: [
-        {
-          name: "Gemini API",
-          level: 70,
-          icon: "SiGoogle",
-          category: "other",
-        },
-        {
-          name: "AI API Integration",
-          level: 70,
-          category: "other",
-        },
-        {
-          name: "Embeddings / RAG",
-          level: 65,
-          category: "other",
-          note: "Used in Evangadi Forum with Qdrant",
-        },
+        { name: "MySQL", category: "database" },
+        { name: "SQL", category: "database" },
+        { name: "Gemini API", category: "other" },
       ],
     },
     {
       title: "Tools",
       skills: [
-        { name: "Git", level: 80, icon: "SiGit", category: "tooling" },
-        { name: "GitHub", level: 80, icon: "SiGithub", category: "tooling" },
-        { name: "VS Code", level: 85, icon: "SiVisualstudiocode", category: "tooling" },
-        { name: "npm", level: 80, icon: "SiNpm", category: "tooling" },
-        { name: "Postman", level: 75, icon: "SiPostman", category: "tooling" },
+        { name: "Git", category: "tooling" },
+        { name: "GitHub", category: "tooling" },
+        { name: "Vercel", category: "tooling" },
+        { name: "Render", category: "tooling" },
       ],
     },
   ],
@@ -126,9 +90,9 @@ export const PORTFOLIO_INFO: Portfolio = {
     {
       id: "evangadi-forum",
       title: "Evangadi Forum",
-      short: "AI-powered discussion platform",
+      short: "Full-stack community Q&A platform",
       description:
-        "A full-stack discussion platform where users can ask questions, post answers, interact with the community, and explore AI-powered search and document-based assistance.",
+        "Developed a full-stack community Q&A platform where users post questions, answer others and share knowledge. Built the interface in React.js with a Node.js backend and REST APIs; deployed to production on Vercel. Includes AI-powered search and course RAG for document-grounded answers.",
       tags: [
         "React",
         "Node.js",
@@ -138,6 +102,8 @@ export const PORTFOLIO_INFO: Portfolio = {
         "Qdrant",
         "JavaScript",
       ],
+      image: "/preview-forum.png",
+      imageFit: "cover",
       href: "https://evangadi-ai-forum-pi.vercel.app",
       links: [
         {
@@ -155,11 +121,13 @@ export const PORTFOLIO_INFO: Portfolio = {
     },
     {
       id: "etgpt-clone",
-      title: "ChatGPT Clone (EtGPT)",
-      short: "Streaming AI chat with multi-session support",
+      title: "EtGPT (ChatGPT Clone)",
+      short: "Conversational AI chat application",
       description:
-        "An AI chat application inspired by ChatGPT, built to practice conversational UIs, streaming responses, authentication, and full-stack integration with a Node/Express backend.",
+        "Built a conversational AI web application inspired by ChatGPT, integrating AI capabilities into a clean chat interface. Deployed live on Vercel as a hands-on project in AI integration, with streaming responses and multi-session support.",
       tags: ["React", "JavaScript", "Node.js", "Express.js", "MySQL", "Gemini"],
+      image: "/preview-etgpt.png",
+      imageFit: "cover",
       href: "https://etgpt-mu.vercel.app",
       links: [
         {
@@ -177,11 +145,13 @@ export const PORTFOLIO_INFO: Portfolio = {
     },
     {
       id: "netstream",
-      title: "Netflix Clone (Netstream)",
-      short: "Streaming-style UI with auth & personalization",
+      title: "Netstream (Netflix Clone)",
+      short: "Streaming-platform UI with responsive layouts",
       description:
-        "A Netflix-inspired browsing experience built to practice responsive UI design, reusable components, Firebase auth, and movie discovery flows.",
+        "Recreated a streaming-platform interface with responsive layouts using HTML5, CSS3, JavaScript and React.js. Deployed to Vercel to practice component-based UI design and API-driven content.",
       tags: ["React", "JavaScript", "CSS", "Firebase", "TMDB"],
+      image: "/preview-netstream.png",
+      imageFit: "cover",
       href: "https://netstream-two.vercel.app",
       links: [
         {
@@ -201,21 +171,22 @@ export const PORTFOLIO_INFO: Portfolio = {
   education: [
     {
       degree: "Bachelor's Degree in Computer Science",
-      school: "University",
-      date: "5-year program · Graduated",
+      school: "Debre Tabor University",
+      date: "2021 – 2026",
+      location: "Debre Tabor, Ethiopia",
     },
   ],
   certifications: [
     {
-      name: "AI Powered Fullstack Application Development",
-      issuer: "Evangadi Network",
-      date: "2025–2026",
+      name: "Full-Stack Application Development",
+      issuer: "Evangadi Networks (scholarship)",
+      date: "2026",
     },
   ],
   extras: {
     languages: [
-      { name: "English", level: "Professional" },
       { name: "Amharic", level: "Native" },
+      { name: "English", level: "Professional" },
     ],
     interests: ["Web development", "AI applications", "Building products"],
   },

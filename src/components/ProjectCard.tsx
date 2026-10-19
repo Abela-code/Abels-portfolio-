@@ -17,8 +17,6 @@ export const ProjectCard: React.FC<{
   // how many tags to show before "+x"
   const VISIBLE_COUNT = 3;
 
-  const FaLink = FaIcons["FaLink" as keyof typeof FaIcons];
-
   const visibleTags = showAll
     ? project?.tags
     : project?.tags?.slice(0, VISIBLE_COUNT);
@@ -85,17 +83,6 @@ export const ProjectCard: React.FC<{
               {project.description}
             </p>
             <div className="mt-4 flex gap-3 flex-wrap text-[var(--muted)]">
-              {project.href && (
-                <a
-                  href={project.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={(e) => e.stopPropagation()}
-                  className="hover:text-[var(--text)] inline-flex items-center gap-1 text-sm font-medium text-[var(--link)] hover:underline"
-                >
-                  {FaLink && <FaLink className="w-4 h-4" />} Demo
-                </a>
-              )}
               {/* Links (dynamic icons) */}
               {project.links &&
                 project.links.length > 0 &&

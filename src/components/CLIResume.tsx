@@ -536,9 +536,9 @@ export default function CLIResume({ open = false, onClose }: Props) {
                 <div className="hidden sm:block">
                   Press{" "}
                   <span className="font-mono text-[var(--text)] bg-[var(--bg)] px-1 rounded">
-                    Tab
+                    Esc
                   </span>{" "}
-                  to autocomplete
+                  to close
                 </div>
                 <button
                   onClick={() => {

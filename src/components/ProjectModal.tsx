@@ -29,8 +29,6 @@ export const ProjectModal: React.FC<{
   const bodyRef = React.useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({ container: bodyRef });
 
-  const FaLink = FaIcons["FaLink" as keyof typeof FaIcons];
-
   // Reset state when modal opens
   useEffect(() => {
     if (open) {
@@ -198,16 +196,6 @@ export const ProjectModal: React.FC<{
                       {/* Links */}
                       {project.links && project.links.length > 0 && (
                         <div className="flex gap-3 flex-wrap mb-4">
-                          {project.href && (
-                            <a
-                              href={project.href}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="inline-flex items-center gap-1 px-3 py-1 text-sm font-medium rounded-md border border-[var(--border)] bg-[var(--surface)] text-[var(--text)] hover:underline"
-                            >
-                              {FaLink && <FaLink className="w-4 h-4" />} Demo
-                            </a>
-                          )}
                           {project.links.map((link) => {
                             const Icon =
                               SiIcons[link.icon as keyof typeof SiIcons] ??

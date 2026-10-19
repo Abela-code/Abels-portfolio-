@@ -1,7 +1,8 @@
+import type { FC } from "react";
 import { motion } from "framer-motion";
 
-export const SkillCircle: React.FC<{ level: number }> = ({ level }) => {
-  const size = 100; // "virtual" size for viewBox
+export const SkillCircle: FC<{ level: number }> = ({ level }) => {
+  const size = 100;
   const strokeWidth = 8;
   const radius = (size - strokeWidth) / 2;
   const circumference = 2 * Math.PI * radius;
@@ -11,9 +12,8 @@ export const SkillCircle: React.FC<{ level: number }> = ({ level }) => {
     <svg
       viewBox={`0 0 ${size} ${size}`}
       preserveAspectRatio="xMidYMid meet"
-      className="w-full h-auto rotate-[-90deg]" // scales to parent width
+      className="w-full h-auto rotate-[-90deg]"
     >
-      {/* Background circle */}
       <circle
         cx={size / 2}
         cy={size / 2}
@@ -22,8 +22,6 @@ export const SkillCircle: React.FC<{ level: number }> = ({ level }) => {
         strokeWidth={strokeWidth}
         fill="transparent"
       />
-
-      {/* Animated foreground circle */}
       <motion.circle
         cx={size / 2}
         cy={size / 2}
@@ -37,8 +35,6 @@ export const SkillCircle: React.FC<{ level: number }> = ({ level }) => {
         transition={{ duration: 1, ease: "easeInOut" }}
         strokeLinecap="round"
       />
-
-      {/* Percentage text */}
       <text
         x="50%"
         y="-50%"
@@ -48,8 +44,6 @@ export const SkillCircle: React.FC<{ level: number }> = ({ level }) => {
       >
         {level}%
       </text>
-
-      {/* Gradient */}
       <defs>
         <linearGradient id="gradient" x1="1" y1="0" x2="0" y2="1">
           <stop offset="0%" stopColor="var(--brand)" />

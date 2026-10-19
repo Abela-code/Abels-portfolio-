@@ -1,5 +1,5 @@
 // PortfolioPage.tsx
-import React, { useState } from "react";
+import { useState, type FC } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ThemeProvider } from "../components/ThemeProvider";
 import { Header } from "../components/shared/Header";
@@ -16,7 +16,7 @@ import { ScrollProgressBar } from "../components/shared/ScrollProgressBar";
 import { ScrollToTop } from "../components/shared/ScrollToTop";
 import CLIResume from "../components/CLIResume";
 
-const PortfolioPage: React.FC = () => {
+const PortfolioPage: FC = () => {
   const [selected, setSelected] = useState<Project | null>(null);
   const [showCLI, setShowCLI] = useState(false);
   const [showHello, setShowHello] = useState(true);
@@ -85,7 +85,7 @@ const PortfolioPage: React.FC = () => {
           <p className="mb-6 text-sm text-gray-500 dark:text-gray-400 mt-1">
             Tools and technologies I use regularly.
           </p>
-          <SkillsList skills={PORTFOLIO_INFO.skills} isBar={true} />
+          <SkillsList skills={PORTFOLIO_INFO.skills} />
         </section>
 
         <section id="contact" className="py-8">
@@ -102,8 +102,8 @@ const PortfolioPage: React.FC = () => {
               <div>
                 <div className="font-semibold">Let's collaborate</div>
                 <div className="text-sm text-gray-500 dark:text-gray-400">
-                  I'm available for freelance and contract work. My inbox is
-                  open.
+                  Open to junior full-stack &amp; frontend roles · Also
+                  available for freelance projects. I usually reply within a day.
                 </div>
               </div>
               <div className="mt-2">
@@ -111,6 +111,11 @@ const PortfolioPage: React.FC = () => {
                 <div className="mt-2 text-sm text-gray-500 dark:text-gray-400">
                   Email: {PORTFOLIO_INFO.personal.contact?.email}
                 </div>
+                {PORTFOLIO_INFO.personal.contact?.phone && (
+                  <div className="text-sm text-gray-500 dark:text-gray-400">
+                    Phone: {PORTFOLIO_INFO.personal.contact.phone}
+                  </div>
+                )}
                 <div className="text-sm text-gray-500 dark:text-gray-400">
                   Location: {PORTFOLIO_INFO.personal.contact?.location}
                 </div>
@@ -118,8 +123,9 @@ const PortfolioPage: React.FC = () => {
               <div className="mt-auto">
                 <div className="text-sm font-medium">Resume</div>
                 <a
-                  href="/"
-                  className="block mt-2 px-4 py-2 rounded-lg border border-gray-200 dark:border-gray-700"
+                  href="/resume.pdf"
+                  download
+                  className="block mt-2 px-4 py-2 rounded-lg border border-gray-200 dark:border-gray-700 hover:bg-[var(--border)]/30 transition"
                 >
                   Download PDF
                 </a>

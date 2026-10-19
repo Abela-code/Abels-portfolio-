@@ -1,11 +1,11 @@
-import type React from "react";
+import type { FC } from "react";
 import ThemeProvider from "../components/ThemeProvider";
 import { ScrollProgressBar } from "../components/shared/ScrollProgressBar";
 import { Header } from "../components/shared/Header";
 import { Resume } from "../components/resume/Resume";
 import { Footer } from "../components/shared/Footer";
 
-const ResumePage: React.FC = () => {
+const ResumePage: FC = () => {
   return (
     <ThemeProvider>
       <ScrollProgressBar />

@@ -1,13 +1,14 @@
-import React from "react";
+import type { FC } from "react";
 import { SiGithub } from "react-icons/si";
+import { FaLinkedin } from "react-icons/fa";
 import { PORTFOLIO_INFO } from "../../config/portfolioData";
 
-export const Footer: React.FC = () => {
+export const Footer: FC = () => {
   const name = PORTFOLIO_INFO.personal.name;
   const firstName = name.split(" ")[0];
-  const github = PORTFOLIO_INFO.personal.contact?.socials?.find(
-    (s) => s.label.toLowerCase() === "github"
-  );
+  const socials = PORTFOLIO_INFO.personal.contact?.socials ?? [];
+  const github = socials.find((s) => s.label.toLowerCase() === "github");
+  const linkedin = socials.find((s) => s.label.toLowerCase() === "linkedin");
 
   return (
     <footer className="text-sm text-[var(--muted)] border-t border-[var(--border)] py-6">
@@ -27,6 +28,17 @@ export const Footer: React.FC = () => {
               className="hover:text-[var(--text)] transition-colors"
             >
               <SiGithub size={22} />
+            </a>
+          )}
+          {linkedin && (
+            <a
+              href={linkedin.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="hover:text-[var(--text)] transition-colors"
+            >
+              <FaLinkedin size={22} />
             </a>
           )}
         </div>
