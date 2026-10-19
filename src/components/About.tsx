@@ -39,10 +39,13 @@ export const About: FC = () => {
     typeof a === "string" ? { url: a } : { url: a.url, label: a.label };
 
   let portraitUrl = "/profile.jpg";
-  if (Array.isArray(avatar) && avatar.length > 0) {
-    portraitUrl = normalizeAvatar(avatar[0]).url || portraitUrl;
-  } else if (avatar) {
-    portraitUrl = normalizeAvatar(avatar).url || portraitUrl;
+  if (Array.isArray(avatar)) {
+    if (avatar.length > 0) {
+      portraitUrl = normalizeAvatar(avatar[0]).url || portraitUrl;
+    }
+  } else if (avatar !== undefined && avatar !== null) {
+    // narrowed to a single AvatarItem
+    portraitUrl = normalizeAvatar(avatar as AvatarItem).url || portraitUrl;
   }
 
   const springScrollTo = (y: number) => {
@@ -149,10 +152,7 @@ export const About: FC = () => {
                 ))}
               </motion.ul>
 
-              <motion.div
-                variants={item}
-                className="mt-8 flex flex-wrap gap-3"
-              >
+              <motion.div variants={item} className="mt-8 flex flex-wrap gap-3">
                 {/* Primary CTA — filled */}
                 <a
                   href="#projects"
