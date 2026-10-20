@@ -56,7 +56,7 @@ const PortfolioPage: FC = () => {
 
       <motion.section
         id="about"
-        className="hero-panel relative h-screen min-h-screen w-full overflow-hidden"
+        className="hero-panel relative min-h-screen w-full overflow-x-hidden overflow-y-visible"
         initial={{ opacity: 0, y: 8 }}
         animate={showHello ? { opacity: 0, y: 8 } : { opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
@@ -70,7 +70,9 @@ const PortfolioPage: FC = () => {
 
       <main className="max-w-6xl 2xl:max-w-9xl mx-auto px-6 py-15 sm:py-20 lg:py-32 relative z-20">
         <section id="projects" className="py-8">
-          <h2 className="text-2xl font-semibold text-[var(--brand)]">Projects</h2>
+          <h2 className="text-2xl font-semibold text-[var(--brand)]">
+            Projects
+          </h2>
           <p className="mb-6 text-sm text-gray-500 dark:text-gray-400 mt-1">
             Selected work — click a card for details.
           </p>
@@ -89,7 +91,9 @@ const PortfolioPage: FC = () => {
         </section>
 
         <section id="contact" className="py-8">
-          <h2 className="text-2xl font-semibold text-[var(--brand)]">Contact</h2>
+          <h2 className="text-2xl font-semibold text-[var(--brand)]">
+            Contact
+          </h2>
           <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
             Tell me about your project, or just say hi.
           </p>
@@ -103,7 +107,8 @@ const PortfolioPage: FC = () => {
                 <div className="font-semibold">Let's collaborate</div>
                 <div className="text-sm text-gray-500 dark:text-gray-400">
                   Open to junior full-stack &amp; frontend roles · Also
-                  available for freelance projects. I usually reply within a day.
+                  available for freelance projects. I usually reply within a
+                  day.
                 </div>
               </div>
               <div className="mt-2">

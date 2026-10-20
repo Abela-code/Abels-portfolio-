@@ -190,21 +190,22 @@ export const About: FC = () => {
           </motion.div>
 
           {/* Right: single strong portrait */}
+        {/* Right: single strong portrait */}
           <motion.div
             variants={item}
-            className="md:col-span-5 flex items-center justify-center"
+            className="md:col-span-5 flex items-center justify-center overflow-visible px-2"
           >
-            <div className="relative w-full max-w-[340px]">
+            <div className="relative w-full max-w-[280px] sm:max-w-[320px] md:max-w-[340px] overflow-visible">
               {/* Decorative offset frame */}
               <div
-                className="absolute inset-3 -right-3 -bottom-3 rounded-2xl border-2 border-[var(--text)] pointer-events-none"
+                className="absolute inset-2 -right-2 -bottom-2 sm:inset-3 sm:-right-3 sm:-bottom-3 rounded-2xl border-2 border-[var(--text)] pointer-events-none"
                 aria-hidden
               />
               <div className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-[var(--surface)] shadow-xl">
                 <img
                   src={portraitUrl}
                   alt={`Portrait of ${name}`}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
             </div>
